@@ -11,10 +11,7 @@ export class CoursesComponent {
     courses: Course[] = [];
     displayedColumns = ['name', 'category'];
 
-    coursesService: CoursesService;
-
-    constructor() {
-      this.coursesService = new CoursesService();
+    constructor(private coursesService: CoursesService) {
       this.courses = this.coursesService.list();
     }
 }
